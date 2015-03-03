@@ -1,0 +1,17 @@
+table {
+  border: 1px solid black;
+  border-radius: 3px;
+}
+table thead {
+  border: 1px solid #d0d0d0;
+  background-color: #8cced8;
+  line-height: 30px;
+}
+table tbody tr {
+  background-color: #d0d0d0;
+  height: 20px;
+  padding: 5px;
+}
+table tbody tr td {
+  padding-right: 15px;
+}
