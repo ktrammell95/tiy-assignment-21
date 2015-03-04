@@ -2,9 +2,16 @@ var Employee = Backbone.Model.extend({
   // url: "js/data.json"
 });
 
-//table rows for contact information
 
+var EmployeesCollection = Backbone.Collection.extend({
+  url: "js/data.json",
+  model: Employee
+});
+
+
+//table rows for contact information
 var EmployeeView = (function() {
+
   var template = JST["contactsRow"];
 
   function EmployeeView(model) {
@@ -58,18 +65,22 @@ var HeaderView = (function() {
 
 })();
 
-//ajax function
 
 $(function() {
-  $.ajax("js/data.json").done(function(data){
-    var headings = Object.keys(data[0]);
+
+  
+  var employees = new EmployeesCollection();
+
+  employees.on("add", function(model){
+    var employeeView = new EmployeeView(model);
+    $("#contacts tbody").append(employeeView.render());
+  })
+
+  employees.fetch().done(function() {
+    var headings = employees.first().keys();
+  // line above is similar to saying var headings = Object.keys(data[0]);
     var headView = new HeaderView(headings);
     $("#contacts thead").html(headView.render());
-
-    _.each(data, function(datum){
-      var employeeModel = new Employee(datum);
-      var employeeView = new EmployeeView(employeeModel);
-      $("#contacts tbody").append(employeeView.render());
-    });
+    
   });
 });
