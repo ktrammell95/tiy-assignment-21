@@ -1,17 +1,34 @@
-table {
+.container {
+  width: 960px;
+  height: 100%;
+  background-color: red;
+}
+.container .sidebar {
+  background-color: green;
+  width: 120px;
+  height: 100%;
+  float: left;
+}
+.container .sidebar li {
+  list-style: none;
+}
+.container .mainTable {
+  float: left;
+}
+.container .mainTable table {
   border: 1px solid black;
   border-radius: 3px;
 }
-table thead {
+.container .mainTable table thead {
   border: 1px solid #d0d0d0;
   background-color: #8cced8;
   line-height: 30px;
 }
-table tbody tr {
+.container .mainTable table tbody tr {
   background-color: #d0d0d0;
   height: 20px;
   padding: 5px;
 }
-table tbody tr td {
+.container .mainTable table tbody tr td {
   padding-right: 15px;
 }

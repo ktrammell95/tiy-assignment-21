@@ -8,34 +8,34 @@ var EmployeesCollection = Backbone.Collection.extend({
   model: Employee
 });
 
+// var FilteredEmployeesCollection = EmployeesCollection.extend({
+
+// });
+
+
+
+
 
 //table rows for contact information
-var EmployeeView = (function() {
+var EmployeeView = Backbone.View.extend({
 
-  var template = JST["contactsRow"];
+  tagName: "tr",
 
-  function EmployeeView(model) {
-    _.extend(this, Backbone.Events)
-    this.model = model;
-    this.$el = $("<tr />");
-    this.$el.addClass("tableRow");
-    this.listenTo(this.model, "change", function() {
-      this.render();
-    });
-  }
+  template: JST["contactsRow"],
 
-  EmployeeView.prototype = {
-    render: function() {
-      var markup = template( this.model.toJSON() )
-      return this.$el.html( markup );
-    }
-  }
+  render: function() {
+    var markup = this.template( this.model.toJSON() );
+    this.$el.html(markup);
+    return this;
+  };
 
-  return EmployeeView;
+  var startDate = new Date(userData.start);
+    var m = moment(startDate);
+    var formattedDate = m.format("MMM D, YYYY");
+    userData.formattedDate = formattedDate;
+});
 
-})();
-
-//table headers for columns
+// table headers for columns
 
 var HeaderView = (function() {
   var template = JST["contactsHead"];
@@ -68,13 +68,14 @@ var HeaderView = (function() {
 
 $(function() {
 
-  
   var employees = new EmployeesCollection();
+  // var filtered = new FilteredEmployeesCollection();
 
   employees.on("add", function(model){
-    var employeeView = new EmployeeView(model);
-    $("#contacts tbody").append(employeeView.render());
-  })
+    var employeeView = new EmployeeView({model: model});
+    $("#contacts tbody").append(employeeView.render().el);
+  });
+    console.log(employees)
 
   employees.fetch().done(function() {
     var headings = employees.first().keys();
