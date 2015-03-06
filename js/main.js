@@ -15,21 +15,7 @@ var EmployeesCollection = Backbone.Collection.extend({
 });
 
 var FilteredEmployeesCollection = EmployeesCollection.extend({
-
-  matches: function(){
-    var filtered = FilteredEmployeesCollection.where({role: "Sales Assoc."});
-    console.log(filtered.length)    //{two: Array[1], six: Array[1], one: Array[3]}
-    // var keys = _.keys(grouped);
-    // console.log(keys);
-    // //["two", "six", "one"]
-    // var memo = {};
-    // _.each(keys, function(key) {
-    //   memo[key] = grouped[key].length;
-    // });
-    // console.log(memo);
-    // return memo;
-    //{two: 1, six: 1, one:3}
-  }, 
+  
 });
 //--------------------------View--------------------------------//
 
@@ -46,64 +32,39 @@ var EmployeeView = Backbone.View.extend({
     return this;
   },
 
-  // formatDate: function() {
-  //   var startDate = new Date(employees.start);
-  //   var m = moment(startDate);
-  //   console.log(m)
-  //   var formattedDate = m.format("MMMM Do, YYYY");
-  //   console.log(formattedDate)
-  //   employees.formattedDate = formattedDate;
-  // },
-
 });
 
-// table headers for columns
+var CheckboxView = Backbone.View.extend({
 
-var HeaderView = (function() {
-  var template = JST["contactsHead"];
+  tagName: "li",
+  template: JST["checkbox"],
 
-  function HeaderView(headings) {      
-    _.extend(this, Backbone.Events);
-      this.headings = headings;
-      this.$el = $("<tr />");
-      this.$el.addClass("tableHead"); 
-    }
-
-  HeaderView.prototype = {
-    render:function() {
-      // map headings into objects that look like { name: "Name"}
-      var data = _.map(this.headings, function(heading){
-          return {name: heading};
-      });
-      // loop through them
-      _.each(data, function(datum){
-        // append th template to tr (this.$el)
-        this.$el.append(template(datum)) 
-      }, this);
-      return this.$el;
-    }
-  }
-  return HeaderView;
-
-})();
-
+  render: function() {
+    var markup = this.template( this.model.toJSON() );
+    this.$el.html(markup);
+    return this;
+  },
+});
 //--------------------------Functions--------------------------------//
 
+  // 4. `function you create`
+  // 5. goes through your list of departments and sees whats checked
+  // 6. filters the EmployeeCollection
+  // 7. sets those results on the FilteredEmployeesCollection
+  // WIN.
 
 
+function formatTimes() {
+  _.each($("time[datetime]"), function(e) { 
+    var $el = $(e); 
+    $el.text(moment($el.attr('datetime'))
+    .format("MMMM Do, YYYY")) });
+}
 
 $(function() {
 
   var employees = new EmployeesCollection();
   var filtered = new FilteredEmployeesCollection();
-
-
-  var startDate = new Date(employees.start);
-  var m = moment(startDate);
-  console.log(m)
-  var formattedDate = m.format("MMMM Do, YYYY");
-  employees.start = formattedDate;
-  console.log(formattedDate)
 
   
   employees.on("add", function(model){
@@ -114,10 +75,27 @@ $(function() {
 
   employees.fetch().done(function() {
     var headings = employees.first().keys();
+    _.each(headings, function(heading){
+    $("thead tr").append($("<th />").text(heading));
+      
+    });
   // line above is similar to saying var headings = Object.keys(data[0]);
-    var headView = new HeaderView(headings);
-    $("#contacts thead").html(headView.render());
     
+    formatTimes();
+
+
+  // var ee = employees;
+    _.uniq(employees.map(function(e) { 
+      console.log(e.attributes.Dept)
+      // return e.attributes.Dept; 
+  }))
+
+    // 1. map employee departments, uniq
+    // 2. for each department, create the filter checkbox (probably its own template)
+      // 3. it'll handle an on change event that calls a `function you create`
+    // for each employee, 
+      // format the date
+      // set the FormattedStart attribute to the formatted date.
   });
 
 });
