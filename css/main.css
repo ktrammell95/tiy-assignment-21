@@ -1,13 +1,10 @@
-body {
-  background-color: #A6ACA7;
-}
 body .header-wrapper {
   width: 100%;
 }
 body .header-wrapper .header {
-  width: 960px;
+  width: 1200px;
   height: 90px;
-  background-color: #575A61;
+  background-color: #334466;
   margin: auto;
   border-radius: 5px;
 }
@@ -18,16 +15,23 @@ body .header-wrapper .header h1 {
   font-size: 40px;
 }
 body .container {
-  width: 960px;
+  width: 1200px;
   height: 100%;
   margin: auto;
 }
+body .container .tabs {
+  margin: 0 0 15px;
+  margin-top: 10px;
+  background-color: #6688AA;
+  width: 100%;
+}
 body .container .sidebar {
   margin-top: 20px;
-  background-color: #A8BEBE;
+  margin-bottom: 20px;
+  width: auto;
   border-radius: 5px;
-  width: 120px;
-  height: 281px;
+  height: 50px;
+  line-height: 50px;
   float: left;
 }
 body .container .sidebar .menu {
@@ -35,26 +39,39 @@ body .container .sidebar .menu {
 }
 body .container .sidebar .menu li {
   list-style: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #6688AA;
+}
+body .container .sidebar .menu li .dept {
+  margin-right: 15px;
 }
 body .container .mainTable {
   float: left;
   padding: 20px;
+  width: 900px;
 }
 body .container .mainTable table {
-  border: 1px solid #9A9C9F;
+  width: 100%;
   border-radius: 3px;
 }
 body .container .mainTable table thead {
-  border: 1px solid #d0d0d0;
-  background-color: #6F9696;
+  border-bottom: 2px solid #575A61;
+  background-color: #77AADD;
   color: #0F0F0D;
   line-height: 30px;
 }
 body .container .mainTable table tbody tr {
-  background-color: #FEFEFE ;
   height: 20px;
   padding: 5px;
 }
 body .container .mainTable table tbody tr td {
-  padding-right: 15px;
+  padding-right: 5px;
+}
+body .container .mainTable table tbody tr td img {
+  width: 100px;
+  height: auto;
+  padding: 10px;
 }
