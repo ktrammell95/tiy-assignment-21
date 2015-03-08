@@ -72,12 +72,8 @@ body {
 }
 .container .sidebar-wrapper .sidebar .menu li {
   list-style: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 5px;
-  margin-bottom: 10px;
 }
-.container .sidebar-wrapper .sidebar .menu li .roundedOne {
+.container .sidebar-wrapper .sidebar .menu li .dept {
   width: 28px;
   height: 28px;
   background: #fcfff4;
@@ -97,11 +93,11 @@ body {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
   position: relative;
 }
-.container .sidebar-wrapper .sidebar .menu li .roundedOne input {
+.container .sidebar-wrapper .sidebar .menu li .dept input {
   margin-top: 8px;
   margin-left: 8px;
 }
-.container .sidebar-wrapper .sidebar .menu li .roundedOne label {
+.container .sidebar-wrapper .sidebar .menu li .dept label {
   cursor: pointer;
   position: absolute;
   width: 20px;
@@ -126,7 +122,7 @@ body {
   margin-left: 40px;
   margin-top: -15px;
 }
-.container .sidebar-wrapper .sidebar .menu li .roundedOne label:after {
+.container .sidebar-wrapper .sidebar .menu li .dept label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -149,12 +145,12 @@ body {
   -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
-.container .sidebar-wrapper .sidebar .menu li .roundedOne label:hover::after {
+.container .sidebar-wrapper .sidebar .menu li .dept label:hover::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
-.container .sidebar-wrapper .sidebar .menu li .roundedOne input[type=checkbox]:checked + label:after {
+.container .sidebar-wrapper .sidebar .menu li .dept input[type=checkbox]:checked + label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
