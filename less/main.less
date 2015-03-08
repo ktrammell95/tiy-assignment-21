@@ -1,65 +1,117 @@
+// @activeColor: #27ae60; //green
+// @darkenColor: darken($activeColor, 20%);
+
+// font-family: 'Stint Ultra Expanded', cursive;
+// font-family: 'Pontano Sans', sans-serif;
 body {
-  // background-color: #BBDDEE;
-  .header-wrapper {
-    width: 100%;
-    .header {
-      width: 1200px;
-      height: 90px;
-      background-color: #334466;
-      margin: auto;
-      border-radius: 5px;
-      h1 {
-        color: white;
-        text-align: center;
-        line-height: 90px;
-        font-size: 40px;
-      } 
-    }
-  }
-
-  .container {
-    width: 1200px;
-    height: 100%;
+  background-color: #585858; 
+}
+.header-wrapper {
+  width: 100%;
+  background-color: #959393;
+  .header {
+    font-family: 'Stint Ultra Expanded', cursive;
+    width: 960px;
+    height: 100px;
     margin: auto;
-    .tabs{
-      margin: 0 0 15px;
-      // float: left;
-      margin-top: 10px;
-      background-color: #6688AA;
-      width: 100%;
-      // 
-    }
-
-    .sidebar {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      width: auto;
-      // background-color: #A8BEBE;
-      border-radius: 5px;
-      // width: 960px;
-      height: 50px;
-      line-height: 50px;
-      float: left;
-      .menu {
-        padding: 0;
-          li{
-           list-style: none;
-           // float: left;
-           padding-left: 20px;
-           padding-right: 20px;
-           border-radius: 5px;
-           margin-bottom: 10px;
-           background-color: #6688AA;
-           .dept {
-            margin-right: 15px;
-           }
+    .logo-wrapper{
+        float: left;
+        width: 200px;
+        height: 100px;
+        background-color: #cccccc;
+      .logo {
+        border-radius: 50px;
+        background-color: #666666;
+        width: 90px;
+        height: 90px;
+        margin-top: 5px;
+        margin-left: 55px;
+        font-size: 56px;
+        font-family: 'Pontano Sans', sans-serif;
+        color: #abdb25;
+        .t {
+          margin-left: 16px;
+          padding-top: 10px;
+          float: left;
+        }
+        .t2 {
+          margin-top: 20px;
+          float: left;
         }
       }
     }
+  .header-main {
+    float: left;
+    // background-color: blue;
+      h1 {
+      color: black;
+      text-align: left;
+      font-size: 40px;
+      font-variant: small-caps;
+      margin-bottom: 0;
+      margin-top: 56px;
+      margin-left: 10px;
+      } 
+    }
+  }
+}//header-wrapper
+
+.container {
+  width: 960px;
+  height: 100%;
+  margin: auto;
+  clear:both;
+  margin-top: -10px;
+  .sidebar-wrapper{
+    float: left;
+    width: 200px;
+    height: 600px;
+    background-color: #cccccc;
+    
+    .empty{
+      width: 200px;
+      height: 50px;
+      background-color: #666666;
+    }
+    .sidebar {
+      // margin-top: 20px;
+      // margin-bottom: 20px;
+      // width: auto;
+      // border-radius: 5px;
+      // height: 50px;
+      // line-height: 50px;
+      .menu {
+       padding: 0;
+        li{
+         list-style: none;
+         padding-left: 20px;
+         padding-right: 20px;
+         border-radius: 5px;
+         margin-bottom: 10px;
+
+        }
+      }
+    }
+  }
+  .mainContent {
+    float: left;
+    margin-top: 0px;
+    width: 730px;
+    background-color: #666666;
+    .tabs{
+      margin: 0 0 15px;
+      height: 50px;
+      background-color: #60767e;
+      width: 100%;
+      // 
+    }
     .mainTable {
       float: left;
-      padding: 20px;
-      width: 900px;
+      background-color: #cccccc;
+      margin-left: 10px;
+      margin-left: 10px;
+      font-size: 14px;
+      min-width: 700px;
       table {
         width: 100%;
         // border: 1px solid #9A9C9F;
@@ -71,19 +123,18 @@ body {
           line-height: 30px;
         }
         tbody tr{
-          // background-color: #FEFEFE ;
           height: 20px;
           padding: 5px;
           td {
             padding-right: 5px;
             img {
-              width: 100px;
-              height:auto;
-              padding: 10px;
+              width: 75px;
+              height: auto;
             }
           }
         }
       }
     }
   }
-}
+}//container
+

@@ -38,7 +38,7 @@ function formatTimes() {
   _.each($("time[datetime]"), function(e) { 
     var $el = $(e); 
     $el.text(moment($el.attr('datetime'))
-    .format("MMMM Do, YYYY")) });
+    .format("MM/DD/YY")) });
 }
 
 $(function() {

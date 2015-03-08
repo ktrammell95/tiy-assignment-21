@@ -1,77 +1,119 @@
-body .header-wrapper {
-  width: 100%;
+body {
+  background-color: #585858;
 }
-body .header-wrapper .header {
-  width: 1200px;
+.header-wrapper {
+  width: 100%;
+  background-color: #959393;
+}
+.header-wrapper .header {
+  font-family: 'Stint Ultra Expanded', cursive;
+  width: 960px;
+  height: 100px;
+  margin: auto;
+}
+.header-wrapper .header .logo-wrapper {
+  float: left;
+  width: 200px;
+  height: 100px;
+  background-color: #cccccc;
+}
+.header-wrapper .header .logo-wrapper .logo {
+  border-radius: 50px;
+  background-color: #666666;
+  width: 90px;
   height: 90px;
-  background-color: #334466;
-  margin: auto;
-  border-radius: 5px;
+  margin-top: 5px;
+  margin-left: 55px;
+  font-size: 56px;
+  font-family: 'Pontano Sans', sans-serif;
+  color: #abdb25;
 }
-body .header-wrapper .header h1 {
-  color: white;
-  text-align: center;
-  line-height: 90px;
-  font-size: 40px;
-}
-body .container {
-  width: 1200px;
-  height: 100%;
-  margin: auto;
-}
-body .container .tabs {
-  margin: 0 0 15px;
-  margin-top: 10px;
-  background-color: #6688AA;
-  width: 100%;
-}
-body .container .sidebar {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: auto;
-  border-radius: 5px;
-  height: 50px;
-  line-height: 50px;
+.header-wrapper .header .logo-wrapper .logo .t {
+  margin-left: 16px;
+  padding-top: 10px;
   float: left;
 }
-body .container .sidebar .menu {
+.header-wrapper .header .logo-wrapper .logo .t2 {
+  margin-top: 20px;
+  float: left;
+}
+.header-wrapper .header .header-main {
+  float: left;
+}
+.header-wrapper .header .header-main h1 {
+  color: black;
+  text-align: left;
+  font-size: 40px;
+  font-variant: small-caps;
+  margin-bottom: 0;
+  margin-top: 56px;
+  margin-left: 10px;
+}
+.container {
+  width: 960px;
+  height: 100%;
+  margin: auto;
+  clear: both;
+  margin-top: -10px;
+}
+.container .sidebar-wrapper {
+  float: left;
+  width: 200px;
+  height: 600px;
+  background-color: #cccccc;
+}
+.container .sidebar-wrapper .empty {
+  width: 200px;
+  height: 50px;
+  background-color: #666666;
+}
+.container .sidebar-wrapper .sidebar .menu {
   padding: 0;
 }
-body .container .sidebar .menu li {
+.container .sidebar-wrapper .sidebar .menu li {
   list-style: none;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 5px;
   margin-bottom: 10px;
-  background-color: #6688AA;
 }
-body .container .sidebar .menu li .dept {
-  margin-right: 15px;
-}
-body .container .mainTable {
+.container .mainContent {
   float: left;
-  padding: 20px;
-  width: 900px;
+  margin-top: 0px;
+  width: 730px;
+  background-color: #666666;
 }
-body .container .mainTable table {
+.container .mainContent .tabs {
+  margin: 0 0 15px;
+  height: 50px;
+  background-color: #60767e;
+  width: 100%;
+}
+.container .mainContent .mainTable {
+  float: left;
+  background-color: #cccccc;
+  margin-left: 10px;
+  font-size: 14px;
+  min-width: 700px;
+}
+.container .mainContent .mainTable table {
   width: 100%;
   border-radius: 3px;
 }
-body .container .mainTable table thead {
+.container .mainContent .mainTable table thead {
   border-bottom: 2px solid #575A61;
   background-color: #77AADD;
   color: #0F0F0D;
   line-height: 30px;
 }
-body .container .mainTable table tbody tr {
+.container .mainContent .mainTable table tbody tr {
   height: 20px;
   padding: 5px;
 }
-body .container .mainTable table tbody tr td {
+.container .mainContent .mainTable table tbody tr td {
   padding-right: 5px;
 }
-body .container .mainTable table tbody tr td img {
-  width: 100px;
+.container .mainContent .mainTable table tbody tr td img {
+  width: 75px;
   height: auto;
-  padding: 10px;
 }

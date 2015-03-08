@@ -4,7 +4,7 @@
   <title></title>
 
   <!-- ==== STYLE SHEETS ==== -->
-
+  <link href='http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded|Special+Elite|Pontano+Sans' rel='stylesheet' type='text/css'>
   <!-- VENDOR -->
   <link rel="stylesheet" href="vendor/css/vendor.css">
 
@@ -26,49 +26,56 @@
 <body>
   <div class ="header-wrapper">
     <div class="header">
-      <h1>Tramski Technology</h1>
-    </div>
-  </div>
-  <div class="container">
-    <div class="tabs">
-      <div>
-      <div>Tab 1</div>
-      <div>Tab 2</div>
-      <div>Tab 3</div>
-      <div>Tab 4</div>
+      <div class="logo-wrapper">
+        <div class = "logo">
+          <div class="t">T</div>
+          <div class="t2">T</div>
+        </div>
+      </div>
+      <div class="header-main">
+        <h1>Tramski Technology</h1>
       </div>
     </div>
-    <div class="sidebar">
-      <form>
-        <ul class="menu">
-        <!--   <li><input type="checkbox" name="All">All</li>
-          <li><input type="checkbox" name="Friend">Friend</li>
-          <li><input type="checkbox" name="Foe">Foe</li> -->
-        </ul>
-      </form>
-    </div><!--sidebar-->
-    <div class="mainTable">
-      <table id="contacts">
-        <thead>
-          <tr class="tableHead-row">
-            <!-- <th>{name}</th>
-            <th class="headerRole">Role</th>
-            <th class="headerManager">Manager</th>
-            <th class="headerPhone">Phone</th>
-            <th class="headerDept">Dept</th> -->
-          </tr>      
-        </thead>
-        <tbody>
-          <!-- <tr class="tableRow">
-            <td class="name">{{Name}}</td>
-            <td class="role">{{Role}}</td>
-            <td class="manager">{{Manager}}</td>
-            <td class="phone">{{Phone}}</td>
-            <td class="dept">{{Dept}}</td>
-          </tr>  -->
-        </tbody>
-      </table>
-    </div><!--mainTable-->
+  </div><!--header-->
+
+  <div class="container">
+    <div class="sidebar-wrapper">
+      <div class="empty"></div>
+      <div class="sidebar">
+        <form>
+          <ul class="menu">
+        <!--     <li><input type="checkbox" name="All">All</li>
+            <li><input type="checkbox" name="Friend">Friend</li>
+            <li><input type="checkbox" name="Foe">Foe</li> -->
+          </ul>
+        </form>
+      </div><!--sidebar-->
+    </div>
+    <div class="mainContent">
+      <div class ="tabs"></div>
+      <div class="mainTable">
+        <table id="contacts">
+          <thead>
+            <tr class="tableHead-row">
+            <!--   <th>{name}</th>
+              <th class="headerRole">Role</th>
+              <th class="headerManager">Manager</th>
+              <th class="headerPhone">Phone</th>
+              <th class="headerDept">Dept</th> -->
+            </tr>      
+          </thead>
+          <tbody>
+            <tr class="tableRow">
+          <!--     <td class="name">{{Name}}</td>
+              <td class="role">{{Role}}</td>
+              <td class="manager">{{Manager}}</td>
+              <td class="phone">{{Phone}}</td>
+              <td class="dept">{{Dept}}</td> -->
+            </tr> 
+          </tbody>
+        </table>
+      </div><!--mainTable-->
+    </div>
   </div><!--container-->
  </body>
 </html>

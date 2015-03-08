@@ -1,11 +1,12 @@
 [{
-  "Photo": "images/lady1.jpeg",
-  "Name": "Sam Smith",
-  "Role": "Sales Assoc.",
-  "Manager": "Martin Mindo",
+  "Photo": "images/lady4.jpeg",
+  "Name": "Zoey Zapata",
+  "Role": "CEO",
+  "Manager": null,
   "Phone": "555.234.4455",
-  "Dept": "Sales",
-  "Start": "2001-01-01T13:33:13Z"
+  "Dept": "Exec Officers",
+  "Start": "2007-07-07T13:33:13Z"
+  
 },{
   "Photo": "images/guy1.jpeg",
   "Name": "Tim Tanenbaum",
@@ -47,13 +48,13 @@
   "Dept": "Exec Officers",
   "Start": "2006-06-06T13:33:13Z"
 },{
-  "Photo": "images/lady4.jpeg",
-  "Name": "Zoey Zapata",
-  "Role": "CEO",
-  "Manager": null,
+  "Photo": "images/lady1.jpeg",
+  "Name": "Sam Smith",
+  "Role": "Sales Assoc.",
+  "Manager": "Martin Mindo",
   "Phone": "555.234.4455",
-  "Dept": "Exec Officers",
-  "Start": "2007-07-07T13:33:13Z"
+  "Dept": "Sales",
+  "Start": "2001-01-01T13:33:13Z"
 },{
   "Photo": "images/guy4.jpeg",
   "Name": "Frank Fixit",
@@ -64,7 +65,7 @@
   "Start": "2008-08-08T13:33:13Z"
 
 },{
-  "Photo": "images/lady5.jpg",
+  "Photo": "images/lady5.jpeg",
   "Name": "Penelope Parker",
   "Role": "In House Developer",
   "Manager": "Jeremiah Jackson",
@@ -73,7 +74,7 @@
   "Start": "2009-09-09T13:33:13Z"
 
 },{
-  "Photo": "images/guy5.jpg",
+  "Photo": "images/guy5.jpeg",
   "Name": "Jeremiah Jackson",
   "Role": "IT Manager",
   "Manager": "Shannon Salazar",
