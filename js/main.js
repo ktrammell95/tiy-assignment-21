@@ -78,11 +78,11 @@ $(function() {
     // for each employee,   
   });
 
-  $(document).on("change", "input.dept", function() {
+  $(document).on("change", "input.dept-btn", function() {
     checkAllFilters();
   })
   function checkAllFilters() {
-    var checked = _.map($("input.dept:checked"), function(e){
+    var checked = _.map($("input.dept-btn:checked"), function(e){
       return $(e).attr("name");
     })
 

@@ -1,10 +1,18 @@
+@darkergrey: #585858;
+@darkgrey: #666666;
+@medgrey: #959393;
+@lightgrey: #cccccc;
+@highlight: #abdb25;
+@blue: #60767e;
+
 // @activeColor: #27ae60; //green
 // @darkenColor: darken($activeColor, 20%);
 
 // font-family: 'Stint Ultra Expanded', cursive;
 // font-family: 'Pontano Sans', sans-serif;
 body {
-  background-color: #585858; 
+  background-color: @darkergrey;
+  font-family: 'Pontano Sans', sans-serif; 
 }
 
 // input[type=checkbox] {
@@ -13,9 +21,8 @@ body {
 
 .header-wrapper {
   width: 100%;
-  background-color: #959393;
+  background-color: @medgrey;
   .header {
-    font-family: 'Stint Ultra Expanded', cursive;
     width: 960px;
     height: 100px;
     margin: auto;
@@ -23,17 +30,16 @@ body {
         float: left;
         width: 200px;
         height: 100px;
-        background-color: #cccccc;
+        background-color: @lightgrey;
       .logo {
         border-radius: 50px;
-        background-color: #666666;
+        background-color: @darkgrey;
         width: 90px;
         height: 90px;
         margin-top: 5px;
         margin-left: 55px;
         font-size: 56px;
-        font-family: 'Pontano Sans', sans-serif;
-        color: #abdb25;
+        color: @highlight;
         .t {
           margin-left: 16px;
           padding-top: 10px;
@@ -71,12 +77,13 @@ body {
     float: left;
     width: 200px;
     height: 600px;
-    background-color: #cccccc;
-    
+    background-color: @lightgrey;
+    margin-top: -8px;
     .empty{
       width: 200px;
       height: 50px;
-      background-color: #666666;
+      background-color: @darkgrey;
+      border-bottom: 2px solid @darkgrey;
     }
     .sidebar {
       // margin-top: 20px;
@@ -89,10 +96,12 @@ body {
        padding: 0;
         li{
          list-style: none;
-         // padding-left: 20px;
-         // padding-right: 20px;
-         // border-radius: 5px;
-         // margin-bottom: 10px;
+         padding-left: 20px;
+         padding-right: 20px;
+         border-radius: 5px;
+         margin-bottom: 10px;
+         // background-color: red;
+         width: 100%;
          .dept {
             width: 28px;
             height: 28px;
@@ -104,8 +113,8 @@ body {
             background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
             background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
-            margin: 20px auto;
-            margin-left: 10px;
+            margin: 20px; 
+            margin-bottom: 40px;
 
             -webkit-border-radius: 50px;
             -moz-border-radius: 50px;
@@ -115,18 +124,13 @@ body {
             -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
             box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
             position: relative;
-              input {
-                margin-top: 8px;
-                margin-left: 8px;
-              }
           }
 
           .dept label {
-            cursor: pointer;
+            // cursor: pointer;
             position: absolute;
             width: 20px;
             height: 20px;
-            margin-top: 0px;
 
             -webkit-border-radius: 50px;
             -moz-border-radius: 50px;
@@ -145,10 +149,6 @@ body {
             background: linear-gradient(top, #222 0%, #45484d 100%);
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d',GradientType=0 );
           }
-            p { 
-            margin-left: 40px;
-            margin-top: -15px;
-          }
 
           .dept label:after {
             -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -158,13 +158,13 @@ body {
             position: absolute;
             width: 16px;
             height: 16px;
-            background: #00bf00;
+            background: #abdb25;
 
-            background: -webkit-linear-gradient(top, #00bf00 0%, #009400 100%);
-            background: -moz-linear-gradient(top, #00bf00 0%, #009400 100%);
-            background: -o-linear-gradient(top, #00bf00 0%, #009400 100%);
-            background: -ms-linear-gradient(top, #00bf00 0%, #009400 100%);
-            background: linear-gradient(top, #00bf00 0%, #009400 100%);
+            background: -webkit-linear-gradient(top, #abdb25 0%, #abdb25 100%);
+            background: -moz-linear-gradient(top, #abdb25 0%, #abdb25 100%);
+            background: -o-linear-gradient(top, #abdb25 0%, #abdb25 100%);
+            background: -ms-linear-gradient(top, #abdb25 0%, #abdb25 100%);
+            background: linear-gradient(top, #abdb25 0%, #abdb25 100%);
 
             -webkit-border-radius: 50px;
             -moz-border-radius: 50px;
@@ -188,25 +188,47 @@ body {
             filter: alpha(opacity=100);
             opacity: 1;
           }
+          p {
+            margin-left: 40px;
+            width: 120px;
+            margin-top: -17px;
+          }
         }
       }
     }
   }
   .mainContent {
     float: left;
-    margin-top: 0px;
+    margin-top: -8px;
     width: 730px;
-    background-color: #666666;
+    background-color: @medgrey;
     .tabs{
       margin: 0 0 15px;
       height: 50px;
-      background-color: #60767e;
+      background-color: @blue;
       width: 100%;
-      // 
+      border-bottom: 2px solid @darkergrey;
+      .tab1, .tab2, .tab3, .tab4 {
+        border: 2px solid @darkergrey;
+        border-bottom: 0;
+        border-radius: 3px;
+        float: left;
+        margin-top: 14px;
+        margin-left: 20px; 
+        font-size: 20px;
+        width: 140px;
+        line-height: 36px;
+        text-align: center;
+        color: @lightgrey;
+      } 
+      .tab3 {
+        background-color: @medgrey;
+        color: black;
+      }
     }
     .mainTable {
       float: left;
-      background-color: #cccccc;
+      background-color: @lightgrey;
       margin-left: 10px;
       margin-left: 10px;
       font-size: 14px;
@@ -217,9 +239,10 @@ body {
         border-radius: 3px;
         thead {
           border-bottom: 2px solid #575A61;
-          background-color: #77AADD;
+          background-color: #60767e;
           color: #0F0F0D;
           line-height: 30px;
+          color: @lightgrey;
         }
         tbody tr{
           height: 20px;
