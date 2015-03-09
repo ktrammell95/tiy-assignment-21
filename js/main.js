@@ -4,7 +4,7 @@
 
 var Employee = Backbone.Model.extend({
   // url: "js/data.json"
-});
+});//model contains the data which is then passed on to the collection
 
 //--------------------------Collection--------------------------------//
 
@@ -15,8 +15,8 @@ var EmployeesCollection = Backbone.Collection.extend({
 });
 
 var FilteredEmployeesCollection = EmployeesCollection.extend({
-  
 });
+
 //--------------------------View--------------------------------//
 
 //table rows for contact information
@@ -34,6 +34,7 @@ var EmployeeView = Backbone.View.extend({
 
 //--------------------------Functions--------------------------------//
   
+//---- formatting the date
 function formatTimes() {
   _.each($("time[datetime]"), function(e) { 
     var $el = $(e); 
@@ -41,12 +42,13 @@ function formatTimes() {
     .format("MM/DD/YY")) });
 }
 
+//---- 
 $(function() {
 
   var employees = new EmployeesCollection();
   var filtered = new FilteredEmployeesCollection();
 
-  
+//---- adding employee info to table  
   filtered.on("add", function(model){
     var employeeView = new EmployeeView({model: model});
     employeeView.listenTo(model, "remove", employeeView.remove);
@@ -54,6 +56,7 @@ $(function() {
   });
     // console.log(employees)
 
+//---- pulling in sidebar list for checkboxes
   employees.fetch().done(function() {
     var headings = employees.first().keys();
     _.each(headings, function(heading){
@@ -70,14 +73,10 @@ $(function() {
     $("ul").append($("<li />").html(markup));
         
     });
-    checkAllFilters();
-    
-    // 1. map employee departments, uniq
-    // 2. for each department, create the filter checkbox (probably its own template)
-      // 3. it'll handle an on change event that calls a `function you create`
-    // for each employee,   
+    checkAllFilters();   
   });
 
+//-----
   $(document).on("change", "input.dept-btn", function() {
     checkAllFilters();
   })
